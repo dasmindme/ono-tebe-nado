@@ -1,1 +1,55 @@
 /* место для вашего кода */
+.header {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.4fr;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 92px 24px 96px;
+    width: 1052px;
+    height: 105px;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+}
+
+.header__links-list {
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+}
+
+.header__links-list-item {
+    list-style-type: circle;
+}
+
+.header__links-list-item .header__link {
+    list-style-type: none; 
+    text-decoration: none;
+}
+
+
+.header__logo {
+    width: 148px;
+    height: 105px;
+}
+
+.address {
+    text-align: start;
+    padding-right: 25px;
+    padding-top: 2px;
+    width: 240px;
+}
+
+.header__address {
+    line-height: 24px;
+}
+
+.cover .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+  }
