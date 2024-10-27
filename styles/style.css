@@ -1,12 +1,7 @@
 /* место для вашего кода */
 @import url(./global.css);
 
-.body {
-    width: 1100px;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-}
-
+/* Сделала шапку грид сеткой из 3-колонок, также задала размеры, размеры шрифтов */
 .header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
@@ -14,10 +9,12 @@
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    margin: 92px 24px 96px;
+    margin: 90px 24px 94px;
     height: 105px;
+    color: #000;
 }
 
+/* Сделала меню навигации флексом для строчного отображения */
 .header__menu {
     display: flex;
     justify-content: space-around;
@@ -25,11 +22,12 @@
 
 .header__links-list {
     display: flex;
-    justify-content: space-between;
     align-self: center;
-    gap: 28px;
+    gap: 32px;
+    margin-right: 10px;
 }
 
+/* Добавила стиль маркера - круг */
 .header__links-list-item {
     list-style-type: circle;
 }
@@ -37,7 +35,7 @@
 .header__link {
     text-decoration: none;
 }
-
+ /* Отображение линии ниже стандартого положения */
 .header__link_active {
     text-decoration: none;
     border-bottom: 1px #000 solid;
@@ -47,28 +45,26 @@
     list-style-type: none;
 }
 
-.header__logo {
-    display: flex;
-}
-
 .header__logo-image {
     width: 148px;
     height: 105px;
 }
 
 .address {
-    margin: 0 25px;
+    width: 240px;
+    line-height: 24px;
     justify-self: end;
     text-align: start;
-    padding-top: 5px;
-    padding-bottom: 2px;
-    width: 240px;
+    font-style: normal;
 }
 
 .header__address {
-    line-height: 24px;
+    margin: 0 25px;
+    padding-top: 5px;
+    padding-bottom: 2px;
 }
 
+ /* Задала секции относительное позиционирование, фон и размеры */
 .cover {
     position: relative;
     width: 1100px;
@@ -81,38 +77,46 @@
     background-position: center;
     z-index: 0;
   }
-
+ 
+/* Задала оверлею абсолютное позиционирование, цвет и размеры */
 .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
   }
 
+  /* Задала заголовку относительное позиционирование, отступы и размеры шрифта */
   .cover__title {
-    position: absolute;
-    height: 355px;
-    width: 1000px;
-    margin: 165px 50px 237px;
+    position: relative;
+    padding: 165px 50px 235px;
     font-size: 100px;
     font-weight: 700;
-    line-height: 123px;
     color: #fff;
+    text-transform: uppercase;
     z-index: 2;
   }
 
+  /* Задала буквам блочный тип, расстояние между буквами, высоту и положение */
   .aligned-text {
     display: block;
+    letter-spacing: 0.3em;
+    line-height: 115px;
   }
 
   .aligned-text_center {
+    display: block;
     text-align: center;
+    letter-spacing: 0.3em;
+    line-height: 139px;
   }
 
 .aligned-text_right {
-    text-align: right;
+    display: block;
+    text-align: end;
     letter-spacing: 0.3em;
+    line-height: 100px;
 }
 
 .letter-spacing-extended {
@@ -123,30 +127,32 @@
     letter-spacing: 0;
 }
 
+/* Задала нижней части секции относительное позицонирование, сделала флексом, чтобы задать положение текстовой части и кнопке*/
 .cover__description {
-   display: flex;
-   justify-content: space-around;
-   z-index: 2;
+    position: relative;
+    bottom: 98px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
 }
 
 .cover__description-text {
-    position: relative;
-    top: 667px;
     font-weight: 400;
-    width: 637px;
+    width: 640px;
     line-height: 28px;
     font-size: 22px;
+    margin-left: 27px;
     color: #FFFFFF;
-    word-spacing: 18px;
+    word-spacing: 19px;
     text-transform: uppercase;
 }
 
 .bet-button {
-    position: relative;
-    top: 655px;
     box-sizing: border-box;
     height: 51px;
     width: 256px;
+    margin-left: 29px;
     font-size: 22px;
     text-align: center;
     text-transform: uppercase;
@@ -154,16 +160,18 @@
     border: 1px solid #FFFFFF;
     color: #FFFFFF;
 }
-
+ 
+/* Задала секции размеры и отступы */
 .lots {
     margin: 179px 24px 146px;
     width: 1052px;
     min-height: 692px;
 }
 
+/* Задала заголовку размеры шрифта и  отступы */
 .lots__heading {
     padding-left: 40px;
-    padding-bottom: 27px;
+    padding-bottom: 28px;
     font-weight: 700;
     text-transform: uppercase;
     color: #000;
@@ -171,6 +179,7 @@
     line-height: 47px;
 }
 
+/* Карточки распредлила флексом и задала им свойство, чтобы новые карточки переносились вниз по заданной ширине */
 .lots__card-list {
     display: flex;
     justify-content: space-between;
@@ -180,13 +189,14 @@
     flex-grow: 1;
 }
 
-
+/* Сделала ссылку блочной и убрала подчеркивание */
 .card-link {
     display: block;
     height: 100%;
     text-decoration: none;
 }
 
+/* Задала карточкам относительное позиционирование, чтобы наложить оверлей. Также сделала их флексом, чтобы раместить содержимое равномерно по заданной высоте */
 .card {
     position: relative;
     display: flex;
@@ -207,6 +217,7 @@
     background-position: center;
 }
 
+/* Задала оверлею относительное позиционирование и цвет */
 .overlay__card {
     position: absolute;
     width: 100%;
@@ -215,12 +226,10 @@
     z-index: 1;
 }
 
+/* Задала заголовку карточки размеры, размеры шрифта, цвет,  отступы */
 .card__title {
     margin-top: 51px;
-   /* position: absolute;*/
     width: 254px;
-   /*  left: 40px;*/
-   /*  top: 51px;*/
     font-weight: 700;
     font-size: 22px;
     line-height: 120%;
@@ -230,6 +239,7 @@
     z-index: 2;
 }
 
+/* Задала для содержимого карточки размеры, размеры шрифта, цвет и отступы */
 .card__text {
     margin-bottom: 48px;
     width: 254px;
@@ -255,6 +265,7 @@
     background-position: center;
 }
 
+/* Сделала ссылку блочной, убрала подчеркивание, задала отступы и размеры */
 .lots__look-more-link {
     display: block;
     margin: 30px 40px 2px;
@@ -266,3 +277,119 @@
     text-decoration: none;
     border-bottom: 1px #000 solid;
 }
+
+/* Сделала всю секцию гридом, первой колонке задала фиксированное значение равное ширине карточки сверху. Первой строке также фиксированное значение задала, чтобы центрировать логотип в ее пределах */
+.about {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    grid-template-rows: 275px 1fr;
+    column-gap: 20px;
+    margin: 147px 24px 180px;
+    width: 1052px;
+    height: 595px;
+}
+
+/* Для колонки сделала флекс, чтобы задать положение параграфам */
+.about__column {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 45px;
+    color: #000000;
+}
+
+/* Для логотипа сделала флекс, чтобы задать центрировать его */
+.about__logo {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-top: 35px;
+    width: 240px; 
+    height: 240px; 
+    border-radius: 50%; 
+    background: #000;
+}
+
+.about__logo-image {
+    width: 240px;
+    height: 115px; 
+}
+
+/* Здадала заголовку размеры, размеры шрифта и отступы */
+.about__title {
+    padding-top: 140px;
+    width: 291px;
+    height: 240px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    text-transform: uppercase;
+}
+
+/* Для параграфов сделала флекс, чтобы задать отступ только первому */
+.about-text__all {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.about__text {
+    width: 688px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* Для подвала сделала грид сетку из 3-х колонок, также указала рамзеры, ращмеры шрифта, цвет и отступы*/
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 1000px;
+    height: 98px;
+    margin: 180px 50px 88px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+    text-decoration: none;
+    font-style: normal;
+}
+
+/* Адресу задала положение начала*/
+.footer__adress {
+    justify-self: start;
+    text-decoration: none;
+}
+
+/* Меню навигации центрировала*/
+.footer__menu {
+    justify-self: center;
+    text-align: center;
+}
+
+.footer__menu-list{
+    list-style-type: none;
+}
+
+.footer__menu-link_active {
+    text-decoration: none;
+}
+
+.footer__menu-link {
+    text-decoration: none;
+    border-bottom: 1px #000 solid;
+}
+
+/* Списки ссылок расположила горизонтально с помощью флекса и задала*/
+.footer__social-list {
+    display: flex;
+    justify-content: end;
+    gap: 48px;
+    list-style-type: none;
+}
+
+.footer__social-list-item {
+    width: 48px;
+    height: 48px;
+}
+
+
