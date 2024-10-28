@@ -362,7 +362,7 @@
   text-decoration: none;
 }
 
-.footer__menu-link .link_active{
+.footer__menu-link .link_active {
   border-bottom: 1px #000 solid;
   text-decoration: none;
 }
